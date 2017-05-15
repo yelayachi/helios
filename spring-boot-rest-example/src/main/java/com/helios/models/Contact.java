@@ -1,7 +1,7 @@
 package com.helios.models;
 
 public class Contact {
-
+ 
 	private String email;
 	private String fixe;
 	private String mobile;
