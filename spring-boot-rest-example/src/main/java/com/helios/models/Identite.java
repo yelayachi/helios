@@ -1,7 +1,7 @@
 package com.helios.models;
 
 public class Identite {
-
+ 
 	private String civilite;
 	private String nom;
 	private String prenom;
