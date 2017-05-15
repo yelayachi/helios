@@ -1,14 +1,14 @@
 package com.helios.repositories;
 
+import java.util.List;
+
 import org.springframework.data.repository.CrudRepository;
 
-import com.helios.models.Pie;
-
-import java.util.List;
+import com.helios.models.Interlocuteur;
 
 /**
  * Created by kaspernissen on 12/02/2016.
  */
-public interface PieRepository extends CrudRepository<Pie, Long> {
-    List<Pie> findByName(String name);
+public interface InterlocuteurRepository extends CrudRepository<Interlocuteur, Long> {
+    List<Interlocuteur> findOne(String name);
 }
