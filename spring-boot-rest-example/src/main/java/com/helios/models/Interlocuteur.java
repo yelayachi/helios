@@ -10,7 +10,7 @@ import javax.persistence.OneToMany;
 
 @Entity
 public class Interlocuteur {
-
+ 
 	@Id
 	private String idInterlocuteur;
 	private String civilite;

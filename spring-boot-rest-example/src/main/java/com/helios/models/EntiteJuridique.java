@@ -7,7 +7,7 @@ import javax.persistence.Id;
 
 @Entity
 public class EntiteJuridique {
-	
+	 
 	@Id
 	private String idEntiteJuridique;
 	private String reference;
