@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.helios.models.Interlocuteur;
 import com.helios.repositories.InterlocuteurRepository;
 
+import io.swagger.annotations.ApiOperation;
+
 @RestController
 @RequestMapping("/interlocuteurs")
 public class InterlocuteurControllerImpl {
@@ -17,6 +19,7 @@ public class InterlocuteurControllerImpl {
   @Autowired
   private InterlocuteurRepository repository;
 	
+  @ApiOperation(value="", notes="permet de rechercher un interlocuteur à partir de son id")
   @RequestMapping(method = RequestMethod.GET, params = {"id"}, value = "/{id}")
 	public ResponseEntity<Interlocuteur> getInterlocuteur(Long id) {
 		return new ResponseEntity<>(repository.findOne(id), HttpStatus.OK);

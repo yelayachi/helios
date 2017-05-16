@@ -1,4 +1,4 @@
-package com.rpicloud;
+package com.helios;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
