@@ -1,13 +1,21 @@
 package com.helios;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import com.github.javafaker.Faker;
-import com.helios.models.Pie;
-import com.helios.repositories.PieRepository;
+import com.helios.models.EntiteJuridique;
+import com.helios.models.Interlocuteur;
+import com.helios.repositories.EntiteJuridiqueRepository;
+import com.helios.repositories.InterlocuteurRepository;
 
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -26,12 +34,14 @@ public class SpringBootRestExampleApplication {
 	}
 
     @Bean
-    public CommandLineRunner initializeDb(PieRepository repository){
+    public CommandLineRunner initializeDb(InterlocuteurRepository repository, EntiteJuridiqueRepository entiteRepository){
         return (args) -> {
             repository.deleteAll();
-            //Insert some random pies
+            //Insert some random interlocuteurs
             for(int i = 0; i < 20; i++) {
-                repository.save(new Pie(faker.lorem().word(), faker.lorem().sentence()));
+            
+                repository.save(new Interlocuteur(faker.lorem().word(), faker.lorem().sentence(), faker.lorem().word(), faker.lorem().word(), faker.lorem().word(), faker.lorem().word(), faker.lorem().word(), faker.lorem().word(), new ArrayList<EntiteJuridique>(
+            		    Arrays.asList(entiteRepository.save(new EntiteJuridique(new Long(1), faker.lorem().word(), faker.lorem().word(), faker.lorem().word(), faker.lorem().word(), faker.lorem().word()))))));
             }
         };
     }

@@ -1,67 +1,119 @@
 package com.helios.models;
 
+import java.util.List;
+
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
+@Entity
 public class Interlocuteur {
- 
+
 	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-	public Long id;
-	public Adresse adresse;
-	public Contact contact;
-	public Identite identite;
-	public boolean supprime;
-	public String espaceMembre;
-	public String idUtilisateur;
-	public boolean accesInternet;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
+	private String idInterlocuteur;
+	private String civilite;
+	private String nom;
+	private String prenom;
+	private String telephoneMobile;
+	private String email;
+	private String espaceMembre;
+	private String fonctions;
+	@OneToMany
+	private List<EntiteJuridique> entitesJuridiques;
+
 	
-	public Interlocuteur(Long id, Adresse adresse, Contact contact, Identite identite, boolean supprime,
-			String espaceMembre, String idUtilisateur, boolean accesInternet) {
+
+	public Interlocuteur(String idInterlocuteur, String civilite, String nom, String prenom, String telephoneMobile,
+			String email, String espaceMembre, String fonctions, List<EntiteJuridique> entitesJuridiques) {
 		
-		this.id = id;
-		this.adresse = adresse;
-		this.contact = contact;
-		this.identite = identite;
-		this.supprime = supprime;
+		this.idInterlocuteur = idInterlocuteur;
+		this.civilite = civilite;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.telephoneMobile = telephoneMobile;
+		this.email = email;
 		this.espaceMembre = espaceMembre;
-		this.idUtilisateur = idUtilisateur;
-		this.accesInternet = accesInternet;
+		this.fonctions = fonctions;
+		this.entitesJuridiques = entitesJuridiques;
 	}
 
-	
-	
-	public Long getId() {
-		return id;
+	public Interlocuteur() {
 	}
 
-	public Adresse getAdresse() {
-		return adresse;
+	public String getIdInterlocuteur() {
+		return idInterlocuteur;
 	}
 
-	public Contact getContact() {
-		return contact;
+	public void setIdInterlocuteur(String idInterlocuteur) {
+		this.idInterlocuteur = idInterlocuteur;
 	}
 
-	public Identite getIdentite() {
-		return identite;
+	public String getCivilite() {
+		return civilite;
 	}
 
-	public boolean isSupprime() {
-		return supprime;
+	public void setCivilite(String civilite) {
+		this.civilite = civilite;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public String getPrenom() {
+		return prenom;
+	}
+
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+
+	public String getTelephoneMobile() {
+		return telephoneMobile;
+	}
+
+	public void setTelephoneMobile(String telephoneMobile) {
+		this.telephoneMobile = telephoneMobile;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getEspaceMembre() {
 		return espaceMembre;
 	}
 
-	public String getIdUtilisateur() {
-		return idUtilisateur;
+	public void setEspaceMembre(String espaceMembre) {
+		this.espaceMembre = espaceMembre;
 	}
 
-	public boolean isAccesInternet() {
-		return accesInternet;
+	public String getFonctions() {
+		return fonctions;
 	}
-	
+
+	public void setFonctions(String fonctions) {
+		this.fonctions = fonctions;
+	}
+
+	public List<EntiteJuridique> getEntitesJuridiques() {
+		return entitesJuridiques;
+	}
+
+	public void setEntitesJuridiques(List<EntiteJuridique> entitesJuridiques) {
+		this.entitesJuridiques = entitesJuridiques;
+	}
+
 }
