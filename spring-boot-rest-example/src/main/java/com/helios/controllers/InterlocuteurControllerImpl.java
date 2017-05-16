@@ -16,6 +16,7 @@ import io.swagger.annotations.ApiOperation;
 @RequestMapping("/vue360/interlocuteur")
 public class InterlocuteurControllerImpl {
 
+	
   @Autowired
   private InterlocuteurRepository repository;
 	
