@@ -13,5 +13,5 @@ import com.helios.models.Interlocuteur;
 public interface InterlocuteurController {
 
     @RequestMapping(method = RequestMethod.GET, params = {"id"}, value = "/{id}")
-    public ResponseEntity<Interlocuteur> getInterlocuteur(@RequestParam(value="id") Long id);
+    public ResponseEntity<Interlocuteur> getInterlocuteur(@RequestParam(value="id") String id);
 }

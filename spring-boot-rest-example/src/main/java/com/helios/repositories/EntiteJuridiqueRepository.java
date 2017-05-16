@@ -4,5 +4,5 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.helios.models.EntiteJuridique;
 
-public interface EntiteJuridiqueRepository  extends CrudRepository<EntiteJuridique, Long> {
+public interface EntiteJuridiqueRepository  extends CrudRepository<EntiteJuridique, String> {
 }

@@ -13,7 +13,7 @@ import com.helios.repositories.InterlocuteurRepository;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
-@RequestMapping("/interlocuteurs")
+@RequestMapping("/vue360/interlocuteur")
 public class InterlocuteurControllerImpl {
 
   @Autowired
@@ -21,7 +21,7 @@ public class InterlocuteurControllerImpl {
 	
   @ApiOperation(value="", notes="permet de rechercher un interlocuteur à partir de son id")
   @RequestMapping(method = RequestMethod.GET, params = {"id"}, value = "/{id}")
-	public ResponseEntity<Interlocuteur> getInterlocuteur(Long id) {
+	public ResponseEntity<Interlocuteur> getInterlocuteur(String id) {
 		return new ResponseEntity<>(repository.findOne(id), HttpStatus.OK);
 	}
 

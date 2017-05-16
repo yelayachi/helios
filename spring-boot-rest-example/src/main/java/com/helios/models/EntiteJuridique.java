@@ -9,9 +9,7 @@ import javax.persistence.Id;
 public class EntiteJuridique {
 	
 	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
-	private Long idEntiteJuridique;
+	private String idEntiteJuridique;
 	private String reference;
 	private String raisonSociale;
 	private String siren;
@@ -21,7 +19,7 @@ public class EntiteJuridique {
 	public EntiteJuridique() {		
 	}
 	
-	public EntiteJuridique(Long idEntiteJuridique, String reference, String raisonSociale, String siren,
+	public EntiteJuridique(String idEntiteJuridique, String reference, String raisonSociale, String siren,
 			String risqueLiquidationJudiciaire, String segmentCommercial) {
 
 		this.idEntiteJuridique = idEntiteJuridique;
@@ -32,11 +30,11 @@ public class EntiteJuridique {
 		this.segmentCommercial = segmentCommercial;
 	}
 
-	public Long getIdEntiteJuridique() {
+	public String getIdEntiteJuridique() {
 		return idEntiteJuridique;
 	}
 
-	public void setIdEntiteJuridique(Long idEntiteJuridique) {
+	public void setIdEntiteJuridique(String idEntiteJuridique) {
 		this.idEntiteJuridique = idEntiteJuridique;
 	}
 

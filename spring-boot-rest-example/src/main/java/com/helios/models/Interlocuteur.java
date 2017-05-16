@@ -12,8 +12,6 @@ import javax.persistence.OneToMany;
 public class Interlocuteur {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
 	private String idInterlocuteur;
 	private String civilite;
 	private String nom;
