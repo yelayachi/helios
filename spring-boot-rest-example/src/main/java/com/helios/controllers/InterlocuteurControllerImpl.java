@@ -20,7 +20,7 @@ public class InterlocuteurControllerImpl {
   @Autowired
   private InterlocuteurRepository repository;
 	
-  @ApiOperation(value="", notes="permet de rechercher un interlocuteur à partir de son id")
+  @ApiOperation(value="Chercher interlocuteur par id", notes="Permet de rechercher un interlocuteur à partir de son id")
   @RequestMapping(method = RequestMethod.GET, params = {"id"}, value = "/{id}")
 	public ResponseEntity<Interlocuteur> getInterlocuteur(String id) {
 		return new ResponseEntity<>(repository.findOne(id), HttpStatus.OK);
