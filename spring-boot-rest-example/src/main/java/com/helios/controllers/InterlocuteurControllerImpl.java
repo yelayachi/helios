@@ -1,5 +1,8 @@
 package com.helios.controllers;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +21,20 @@ public class InterlocuteurControllerImpl implements InterlocuteurController {
 @Override
 public ResponseEntity<Interlocuteur> getInterlocuteur(String id) {
 	return new ResponseEntity<>(repository.findOne(id), HttpStatus.OK);
+}
+
+@Override
+public ResponseEntity<List<Interlocuteur>> findAllInterlocuteur(String id_EntiteJ, String Val_A_Rechercher,
+		String nbEnreg) {
+	List<String> tmp = new ArrayList<>();
+	tmp.add(id_EntiteJ);
+	ResponseEntity<List<Interlocuteur>> listInterlocuteur = new ResponseEntity<>(repository.findAll(tmp), HttpStatus.OK);
+	if (Val_A_Rechercher.equals("")){
+		//if (reposi)
+	}else{
+		
+	}
+	return null;
 }
 
   

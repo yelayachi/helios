@@ -1,5 +1,7 @@
 package com.helios.repositories;
 
+import java.util.List;
+
 import org.springframework.data.repository.CrudRepository;
 
 import com.helios.models.Interlocuteur;
@@ -9,4 +11,5 @@ import com.helios.models.Interlocuteur;
  */
 public interface InterlocuteurRepository extends CrudRepository<Interlocuteur, String> {
     Interlocuteur findOne(String id);
+    List<Interlocuteur> findAll(List<String> id_EntiteJ);
 }

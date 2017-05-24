@@ -16,32 +16,46 @@ public class Interlocuteur {
 	private String civilite;
 	private String nom;
 	private String prenom;
+	private String telephone;
 	private String telephoneMobile;
 	private String email;
+	private String fonction;
 	private String espaceMembre;
-	private String fonctions;
+	private String role;
+	private String prefCanalContact;
+	private String commentaire;
+	private String accesInternetActif;
+	private String statutEspaceClient;
 	@OneToMany
 	private List<EntiteJuridique> entitesJuridiques;
 
-	
-
-	public Interlocuteur(String idInterlocuteur, String civilite, String nom, String prenom, String telephoneMobile,
-			String email, String espaceMembre, String fonctions, List<EntiteJuridique> entitesJuridiques) {
-		
+	public Interlocuteur(String idInterlocuteur, String civilite, String nom, String prenom, String telephone,
+			String telephoneMobile, String email, String fonction, String espaceMembre, String role,
+			String prefCanalContact, String commentaire, String accesInternetActif, String statutEspaceClient,
+			List<EntiteJuridique> entitesJuridiques) {
+		super();
 		this.idInterlocuteur = idInterlocuteur;
 		this.civilite = civilite;
 		this.nom = nom;
 		this.prenom = prenom;
+		this.telephone = telephone;
 		this.telephoneMobile = telephoneMobile;
 		this.email = email;
+		this.fonction = fonction;
 		this.espaceMembre = espaceMembre;
-		this.fonctions = fonctions;
+		this.role = role;
+		this.prefCanalContact = prefCanalContact;
+		this.commentaire = commentaire;
+		this.accesInternetActif = accesInternetActif;
+		this.statutEspaceClient = statutEspaceClient;
 		this.entitesJuridiques = entitesJuridiques;
 	}
-
+	
+	
 	public Interlocuteur() {
 	}
 
+	
 	public String getIdInterlocuteur() {
 		return idInterlocuteur;
 	}
@@ -97,14 +111,76 @@ public class Interlocuteur {
 	public void setEspaceMembre(String espaceMembre) {
 		this.espaceMembre = espaceMembre;
 	}
-
-	public String getFonctions() {
-		return fonctions;
+	
+	public String getTelephone() {
+		return telephone;
 	}
 
-	public void setFonctions(String fonctions) {
-		this.fonctions = fonctions;
+
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
 	}
+
+
+	public String getFonction() {
+		return fonction;
+	}
+
+
+	public void setFonction(String fonction) {
+		this.fonction = fonction;
+	}
+
+
+	public String getRole() {
+		return role;
+	}
+
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+
+	public String getPrefCanalContact() {
+		return prefCanalContact;
+	}
+
+
+	public void setPrefCanalContact(String prefCanalContact) {
+		this.prefCanalContact = prefCanalContact;
+	}
+
+
+	public String getCommentaire() {
+		return commentaire;
+	}
+
+
+	public void setCommentaire(String commentaire) {
+		this.commentaire = commentaire;
+	}
+
+
+	public String getAccesInternetActif() {
+		return accesInternetActif;
+	}
+
+
+	public void setAccesInternetActif(String accesInternetActif) {
+		this.accesInternetActif = accesInternetActif;
+	}
+
+
+	public String getStatutEspaceClient() {
+		return statutEspaceClient;
+	}
+
+
+	public void setStatutEspaceClient(String statutEspaceClient) {
+		this.statutEspaceClient = statutEspaceClient;
+	}
+
 
 	public List<EntiteJuridique> getEntitesJuridiques() {
 		return entitesJuridiques;
@@ -114,4 +190,5 @@ public class Interlocuteur {
 		this.entitesJuridiques = entitesJuridiques;
 	}
 
+	
 }
