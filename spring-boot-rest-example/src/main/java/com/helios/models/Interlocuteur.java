@@ -30,8 +30,8 @@ public class Interlocuteur {
 	private List<EntiteJuridique> entitesJuridiques;
 
 	public Interlocuteur(String idInterlocuteur, String civilite, String nom, String prenom, String telephone,
-			String telephoneMobile, String email, String fonction, String espaceMembre, String role,
-			String prefCanalContact, String commentaire, String accesInternetActif, String statutEspaceClient,
+			String telephoneMobile, String fonction, String espaceMembre, String role,
+			String prefCanalContact, String commentaire, String accesInternetActif, String statutEspaceClient,String email,
 			List<EntiteJuridique> entitesJuridiques) {
 		super();
 		this.idInterlocuteur = idInterlocuteur;

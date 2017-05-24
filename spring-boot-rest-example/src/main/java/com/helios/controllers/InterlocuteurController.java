@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.helios.models.Interlocuteur;
 
@@ -28,16 +29,17 @@ public interface InterlocuteurController {
   	
     
     /**
-     * Récupération des données concernant l'interlocuteur
+     * Recuperation des données concernant l'interlocuteur
      * @param id_EntiteJ
      * @param Val_A_Rechercher
      * @param nbEnreg
      * @return
      */
     @ApiOperation(value="Récupération des données concernant l'interlocuteur (client)", notes="Service Namek (USW6 et USW5)")
-    @RequestMapping(method = RequestMethod.GET,params = {"id_EntiteJ"}, value = "/{id_EntiteJ}")
+    @RequestMapping(method = RequestMethod.GET,params = {"id_EntiteJ"}, value = "/{id_EntiteJ}",consumes="text/html")
+    @ResponseBody
     public ResponseEntity<List<Interlocuteur>> findAllInterlocuteur(@ApiParam(value = "id entite juridique") @PathParam("id entite juridique") String id_EntiteJ,
-    																		@ApiParam(value = "Valeur à rechercher") @RequestParam("Valeur à rechercher") String Val_A_Rechercher,
-    																		@ApiParam(value = "nombre d'enregistrements à retourner") @RequestParam("nombre d'enregistrements à retourner") String nbEnreg) ;
+    																		/*@ApiParam(value = "Valeur à rechercher")*/ @RequestParam(name="Valeur à rechercher",required = false) String Val_A_Rechercher,
+    																		/*@ApiParam(value = "nombre d'enregistrements à retourner")*/ @RequestParam(name="nombre d'enregistrements à retourner",required = false) String nbEnreg) ;
     
 }
