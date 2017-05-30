@@ -9,10 +9,10 @@ import org.springframework.http.ResponseEntity;
 public class InterlocuteurUtilitaires {
 
 	/**
-	 * Permet d'appliquer un filtre s sur un interlocuteur 
+	 * Permet d'appliquer un filtre s sur un interlocuteur i
 	 * @param i : Interlocuteur
 	 * @param s :  String
-	 * @return true si l'un des attribut de l'interlocuteur match, false sinon
+	 * @return boolean
 	 */
 	public static boolean isMatch(Interlocuteur i, String s){
 		
@@ -21,16 +21,15 @@ public class InterlocuteurUtilitaires {
 			i.getEspaceMembre().contains(s) ||	i.getRole().contains(s) ||	i.getPrefCanalContact().contains(s) ||	i.getCommentaire().contains(s) ||
 			i.getAccesInternetActif().contains(s) || i.getStatutEspaceClient().contains(s)){
 			return true;
-		}else{
-			return false;
 		}
+			return false;
 	}
 	
 	/**
 	 * Permet de filtrer tout les interlocuteurs qui matchent avec s.
 	 * @param interlocuteurs : List<Interlocuteur>
 	 * @param s : String
-	 * @return Une liste d'interlocuteurs
+	 * @return ResponseEntity<List<Interlocuteur>>
 	 */
 	public static ResponseEntity<List<Interlocuteur>> getAllMath(ResponseEntity<List<Interlocuteur>> interlocuteurs, String s){
 		
@@ -52,19 +51,31 @@ public class InterlocuteurUtilitaires {
 	 * Retourne une liste comme un sous ensemble de taille size d'une liste d'interlocuteurs
 	 * @param interlocuteurs : ResponseEntity<List<Interlocuteur>>
 	 * @param size : int
-	 * @return une liste d'interlocuteurs
+	 * @return ResponseEntity<List<Interlocuteur>>
 	 */
 	public static ResponseEntity<List<Interlocuteur>> getFixeSize(ResponseEntity<List<Interlocuteur>> interlocuteurs, int size){
 		
-		List<Interlocuteur> resultTmp = new ArrayList<Interlocuteur>(size);
+		List<Interlocuteur> resultTmp = new ArrayList<Interlocuteur>(size);		
+		//Taille de la liste
+		int tailleList = interlocuteurs.getBody().size();
+		//indice
+		int i = 0;
 		
-		for ( int i=0;i<=size;i++){
-			resultTmp.add(interlocuteurs.getBody().get(i));
+		while ( (i < tailleList) && (i < size) ){
+				resultTmp.add(interlocuteurs.getBody().get(i));
+				i++;
 		}
 		ResponseEntity<List<Interlocuteur>> resultList = new ResponseEntity<>(resultTmp, HttpStatus.OK);
+		
 		return resultList;
 	}
 	
+	/**
+	 * Retourne la liste des interlocuteurs dont l'id de l'entité juridique = id
+	 * @param interlocuteurs : List<Interlocuteur>
+	 * @param id : String
+	 * @return List<Interlocuteur>
+	 */
 	public static List<Interlocuteur> getAllByID(List<Interlocuteur> interlocuteurs, String id){
 		
 		List<Interlocuteur> resultList = new ArrayList<>();
@@ -78,7 +89,7 @@ public class InterlocuteurUtilitaires {
 				}
 			}
 		}
-		return interlocuteurs;
+		return resultList;
 		
 		
 	}

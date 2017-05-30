@@ -51,7 +51,7 @@ public class SpringBootRestExampleApplication {
             		    Arrays.asList(entiteRepository.save(new EntiteJuridique("1-5G6T4DO", "56937493", "EEEEE", "856930657", "0", "PEC"))))));
                 
                 repository.save(new Interlocuteur("1-15FTP98","MME","DAVID BUYEL","FRANCOISE","+330232595707","+330640969063","Assistant de Direction","EDF Entreprises","","","","1","",faker.internet().emailAddress(), new ArrayList<EntiteJuridique>(
-            		    Arrays.asList(entiteRepository.save(new EntiteJuridique("1-6G7S4RD", "85696363", "FFFFF", "768460670", "0", "PEC"))))));                           
+            		    Arrays.asList(entiteRepository.save(new EntiteJuridique("1-3G4J4OD", "85696363", "FFFFF", "768460670", "0", "PEC"))))));                           
         };
     }
     

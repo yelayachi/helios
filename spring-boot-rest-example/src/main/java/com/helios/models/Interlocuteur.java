@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -26,7 +27,7 @@ public class Interlocuteur {
 	private String commentaire;
 	private String accesInternetActif;
 	private String statutEspaceClient;
-	@OneToMany
+	@ManyToMany
 	private List<EntiteJuridique> entitesJuridiques;
 
 	public Interlocuteur(String idInterlocuteur, String civilite, String nom, String prenom, String telephone,
