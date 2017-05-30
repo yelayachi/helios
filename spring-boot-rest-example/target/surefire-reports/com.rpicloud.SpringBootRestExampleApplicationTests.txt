@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.rpicloud.SpringBootRestExampleApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 27.764 sec - in com.rpicloud.SpringBootRestExampleApplicationTests

@@ -1,4 +1,10 @@
-D:\Users\yaelayac\Desktop\edma\swagger\spring-boot-rest-swagger-example-master\src\main\java\com\rpicloud\SpringBootRestExampleApplication.java
-D:\Users\yaelayac\Desktop\edma\swagger\spring-boot-rest-swagger-example-master\src\main\java\com\rpicloud\controllers\PieRestController.java
-D:\Users\yaelayac\Desktop\edma\swagger\spring-boot-rest-swagger-example-master\src\main\java\com\rpicloud\models\Pie.java
-D:\Users\yaelayac\Desktop\edma\swagger\spring-boot-rest-swagger-example-master\src\main\java\com\rpicloud\repositories\PieRepository.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\controllers\InterlocuteurControllerImpl.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\controllers\InterlocuteurController.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\repositories\InterlocuteurRepository.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\Contact.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\EntiteJuridique.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\Interlocuteur.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\repositories\EntiteJuridiqueRepository.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\SpringBootRestExampleApplication.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\Adresse.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\Identite.java
