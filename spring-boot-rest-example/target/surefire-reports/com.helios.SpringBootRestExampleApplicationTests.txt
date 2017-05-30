@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.helios.SpringBootRestExampleApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 32.867 sec - in com.helios.SpringBootRestExampleApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.673 sec - in com.helios.SpringBootRestExampleApplicationTests

@@ -1,11 +1,8 @@
 package com.helios.util;
 
-import static org.mockito.Matchers.endsWith;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import org.springframework.http.ResponseEntity;
 
 import com.helios.models.EntiteJuridique;
 import com.helios.models.EntiteJuridiqueVue;
@@ -14,7 +11,6 @@ import com.helios.models.InterlocuteurWS02Vue;
 import com.helios.models.WS01Vue;
 import com.helios.models.WS02Vue;
 import com.helios.models.WS03Vue;
-import com.helios.models.WS0506Vue;
 
 public class MapperObjetVue {
 
@@ -110,6 +106,9 @@ public class MapperObjetVue {
 			ws03vue.setSegmentCommercial(entiteJ.getSegmentCommercial());
 			ws03vue.setRisqueLiquidationJudiciaire(entiteJ.getRisqueLiquidationJudiciaire());
 			ws03vue.setSiren(entiteJ.getSiren());
+			//ws03vue.setSensibiliteCoupure(entiteJ.getsen);
+			if(entiteJ.getListInter() != null)
+			ws03vue.setNbInterlocuteurs(String.valueOf(entiteJ.getListInter().size()));
 			//ws03vue.setMarche(entiteJ.getma));
 			//ws03vue.setApproche(entiteJ.getap);
 			listWs03vue.add(ws03vue);

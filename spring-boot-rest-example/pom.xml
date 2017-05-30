@@ -6,7 +6,7 @@
 	<groupId>com.rpicloud</groupId>
 	<artifactId>poc-swagger-edma</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>poc-swagger-edma</name>
 	<description>Demo sprint 1</description>
