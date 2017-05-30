@@ -10,7 +10,7 @@ import javax.persistence.OneToOne;
 
 @Entity
 public class EntiteJuridique {
-	 
+	
 	@Id
 	private String idEntiteJuridique;
 	private String reference;

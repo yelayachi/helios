@@ -7,7 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 public class InterlocuteurUtilitaires {
-
+ 
 	/**
 	 * Permet d'appliquer un filtre s sur un interlocuteur i
 	 * @param i : Interlocuteur

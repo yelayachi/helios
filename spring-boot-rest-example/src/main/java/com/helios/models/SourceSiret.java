@@ -11,7 +11,7 @@ public class SourceSiret {
 	private boolean vega;
 	private boolean inconnu;
 	private boolean migre;
-	
+	 
 	public SourceSiret(String idSourceSiret, boolean cloe, boolean vega, boolean inconnu, boolean migre) {
 		this.idSourceSiret = idSourceSiret;
 		this.cloe = cloe;
