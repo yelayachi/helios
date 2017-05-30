@@ -41,7 +41,7 @@ public class SpringBootRestExampleApplication {
 		SpringApplication.run(SpringBootRestExampleApplication.class, args);
 	}
 
-    @Bean
+    @Bean 
     public CommandLineRunner initializeDb(InterlocuteurRepository repository, EntiteJuridiqueRepository entiteRepository, EtablissementRepository etablissementRepo, SourceSiretRepository siretRepo){
         return (args) -> {
             repository.deleteAll();
