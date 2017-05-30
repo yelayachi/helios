@@ -11,5 +11,5 @@ import com.helios.models.Interlocuteur;
  */
 public interface InterlocuteurRepository extends CrudRepository<Interlocuteur, String> {
     Interlocuteur findOne(String id);
-    List<Interlocuteur> findAll(List<String> id_EntiteJ);
+    List<Interlocuteur> findAll();
 }

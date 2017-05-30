@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -26,12 +27,12 @@ public class Interlocuteur {
 	private String commentaire;
 	private String accesInternetActif;
 	private String statutEspaceClient;
-	@OneToMany
+	@ManyToMany
 	private List<EntiteJuridique> entitesJuridiques;
 
 	public Interlocuteur(String idInterlocuteur, String civilite, String nom, String prenom, String telephone,
-			String telephoneMobile, String email, String fonction, String espaceMembre, String role,
-			String prefCanalContact, String commentaire, String accesInternetActif, String statutEspaceClient,
+			String telephoneMobile, String fonction, String espaceMembre, String role,
+			String prefCanalContact, String commentaire, String accesInternetActif, String statutEspaceClient,String email,
 			List<EntiteJuridique> entitesJuridiques) {
 		super();
 		this.idInterlocuteur = idInterlocuteur;
@@ -51,6 +52,26 @@ public class Interlocuteur {
 		this.entitesJuridiques = entitesJuridiques;
 	}
 	
+	public Interlocuteur(String idInterlocuteur, String civilite, String nom, String prenom, String telephone,
+			String telephoneMobile, String fonction, String espaceMembre, String role,
+			String prefCanalContact, String commentaire, String accesInternetActif, String statutEspaceClient,String email) {
+		super();
+		this.idInterlocuteur = idInterlocuteur;
+		this.civilite = civilite;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.telephone = telephone;
+		this.telephoneMobile = telephoneMobile;
+		this.email = email;
+		this.fonction = fonction;
+		this.espaceMembre = espaceMembre;
+		this.role = role;
+		this.prefCanalContact = prefCanalContact;
+		this.commentaire = commentaire;
+		this.accesInternetActif = accesInternetActif;
+		this.statutEspaceClient = statutEspaceClient;
+	}
+
 	
 	public Interlocuteur() {
 	}
