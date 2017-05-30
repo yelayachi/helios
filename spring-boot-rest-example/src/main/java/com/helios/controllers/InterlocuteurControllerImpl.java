@@ -1,6 +1,6 @@
 package com.helios.controllers;
 
-import java.util.List; 
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -31,6 +31,7 @@ public class InterlocuteurControllerImpl{
   
   @ApiOperation(value="Récupération des données concernant la vue 360° interlocuteur", notes="Service NAMEK")
   @RequestMapping(method = RequestMethod.GET, value = "/vue360/interlocuteur/{id}")
+
 	public ResponseEntity<Interlocuteur> getInterlocuteur(@PathVariable(value="id") String id) {
   	return new ResponseEntity<>(repository.findOne(id), HttpStatus.OK);
   }
@@ -51,15 +52,16 @@ public class InterlocuteurControllerImpl{
   		//cas USW6
   		return InterlocuteurUtilitaires.getFixeSize(listInterlocuteur,Integer.valueOf(nbEnreg));
   	}
-  	//cas USW5
   	
+  	//cas USW5  	
   	ResponseEntity<List<Interlocuteur>> result= InterlocuteurUtilitaires.getFixeSize(InterlocuteurUtilitaires.getAllMath(listInterlocuteur, Val_A_Rechercher),Integer.parseInt(nbEnreg));
   	
   	MultiValueMap<String,String> header = new HttpHeaders();
   	header.add("nbResult", result.getBody().size()+"");
   	
-  	return new ResponseEntity<>(result.getBody(),header ,HttpStatus.OK);
   	
+  	return new ResponseEntity<>(result.getBody(),header ,HttpStatus.OK);
   }
+  
   
 }
