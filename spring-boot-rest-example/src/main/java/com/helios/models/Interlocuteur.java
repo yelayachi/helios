@@ -26,6 +26,7 @@ public class Interlocuteur {
 	private boolean accesInternetActif;
 	private boolean statutEspaceClient;
 	private boolean espaceClient;
+	private int nbEntitesJuridiques;
 	@ManyToMany
 	private List<EntiteJuridique> entitesJuridiques;
 
@@ -49,6 +50,7 @@ public class Interlocuteur {
 		this.statutEspaceClient = statutEspaceClient;
 		this.setEspaceClient(espaceClient);
 		this.entitesJuridiques = entitesJuridiques;
+		this.setNbEntitesJuridiques(entitesJuridiques.size());
 	}
 	
 	public Interlocuteur(String idInterlocuteur, String civilite, String nom, String prenom, String telephoneFixe,
@@ -212,7 +214,7 @@ public class Interlocuteur {
 	}
 
 
-	public boolean isEspaceClient() {
+	public boolean getEspaceClient() {
 		return espaceClient;
 	}
 
@@ -224,5 +226,14 @@ public class Interlocuteur {
 	public void addEntiteJ(EntiteJuridique ej){
 		this.entitesJuridiques.add(ej);
 	}
+
+	public int getNbEntitesJuridiques() {
+		return nbEntitesJuridiques;
+	}
+
+	public void setNbEntitesJuridiques(int nbEntitesJuridiques) {
+		this.nbEntitesJuridiques = nbEntitesJuridiques;
+	}
+	
 	
 }

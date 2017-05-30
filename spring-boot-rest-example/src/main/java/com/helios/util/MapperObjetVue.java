@@ -11,6 +11,7 @@ import com.helios.models.InterlocuteurWS02Vue;
 import com.helios.models.WS01Vue;
 import com.helios.models.WS02Vue;
 import com.helios.models.WS03Vue;
+import com.helios.models.WS0506Vue;
 
 public class MapperObjetVue {
 
@@ -32,6 +33,7 @@ public class MapperObjetVue {
 		ws01.setPrenom(interlocuteur.getPrenom());
 		ws01.setTelephone(interlocuteur.getTelephoneFixe());
 		ws01.setTelephoneMobile(interlocuteur.getTelephoneMobile());
+		ws01.setNbEntitesJuridiques(interlocuteur.getNbEntitesJuridiques());
 		List<EntiteJuridiqueVue> entitesJuridiques = new ArrayList<>();
 		if (interlocuteur.getEntitesJuridiques() != null)
 			for (EntiteJuridique entiteJuridique : interlocuteur.getEntitesJuridiques()) {
@@ -41,7 +43,7 @@ public class MapperObjetVue {
 				entiteJuridiqueVue.setReference(entiteJuridique.getReference());
 				entiteJuridiqueVue.setSegmentCommercial(entiteJuridique.getSegmentCommercial());
 				entiteJuridiqueVue.setSiren(entiteJuridique.getSiren());
-				// entiteJuridiqueVue.setSource(entiteJuridique.gets);
+				entiteJuridiqueVue.setSource(entiteJuridique.getSource());
 				entiteJuridiqueVue.setRisqueLiquidationJudiciaire(entiteJuridique.getRisqueLiquidationJudiciaire());
 				entitesJuridiques.add(entiteJuridiqueVue);
 			}
@@ -117,4 +119,29 @@ public class MapperObjetVue {
 		return listWs03vue;
 	}
 
+    public static List<WS0506Vue> traduireToWS0506Vue(List<Interlocuteur> interlocuteurs) {
+
+    	List<WS0506Vue> result = new ArrayList<>();
+    	
+    	for (Interlocuteur interlocuteur : interlocuteurs){
+	    	
+    		WS0506Vue ws0506 = new WS0506Vue();
+	
+			ws0506.setCivilite(interlocuteur.getCivilite());
+			ws0506.setEmail(interlocuteur.getEmail());
+			ws0506.setFonction(interlocuteur.getFonction());
+			ws0506.setIdInterlocuteur(interlocuteur.getIdInterlocuteur());
+			ws0506.setNom(interlocuteur.getNom());
+			ws0506.setEspaceClient(interlocuteur.getEspaceClient()+"");
+			ws0506.setStatutEspaceClient(interlocuteur.getStatutEspaceClient()+"");
+			ws0506.setPreferenceContact(interlocuteur.getPrefCanalContact());
+			ws0506.setCommentaire(interlocuteur.getCommentaire());
+			ws0506.setPrenom(interlocuteur.getPrenom());
+			ws0506.setTelephoneFixe(interlocuteur.getTelephoneFixe());
+			ws0506.setTelephoneMobile(interlocuteur.getTelephoneMobile());
+			
+			result.add(ws0506);
+    	}
+		return result;
+	}
 }
