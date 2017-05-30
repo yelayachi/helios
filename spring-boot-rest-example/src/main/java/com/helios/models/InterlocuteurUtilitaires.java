@@ -17,9 +17,9 @@ public class InterlocuteurUtilitaires {
 	public static boolean isMatch(Interlocuteur i, String s){
 		
 		if (i.getIdInterlocuteur().contains(s) || i.getCivilite().contains(s) || i.getNom().contains(s) || i.getPrenom().contains(s) || 
-			i.getTelephone().contains(s) || i.getTelephoneMobile().contains(s) ||	i.getEmail().contains(s) || i.getFonction().contains(s) ||
+			i.getTelephoneFixe().contains(s) || i.getTelephoneMobile().contains(s) ||	i.getEmail().contains(s) || i.getFonction().contains(s) ||
 			i.getEspaceMembre().contains(s) ||	i.getRole().contains(s) ||	i.getPrefCanalContact().contains(s) ||	i.getCommentaire().contains(s) ||
-			i.getAccesInternetActif().contains(s) || i.getStatutEspaceClient().contains(s)){
+			(i.getAccesInternetActif()+"").contains(s) || (i.getStatutEspaceClient()+"").contains(s)){
 			return true;
 		}
 			return false;

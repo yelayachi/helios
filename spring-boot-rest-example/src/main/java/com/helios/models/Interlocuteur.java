@@ -1,13 +1,11 @@
 package com.helios.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
 
 @Entity
 public class Interlocuteur {
@@ -17,7 +15,7 @@ public class Interlocuteur {
 	private String civilite;
 	private String nom;
 	private String prenom;
-	private String telephone;
+	private String telephoneFixe;
 	private String telephoneMobile;
 	private String email;
 	private String fonction;
@@ -25,21 +23,21 @@ public class Interlocuteur {
 	private String role;
 	private String prefCanalContact;
 	private String commentaire;
-	private String accesInternetActif;
-	private String statutEspaceClient;
+	private boolean accesInternetActif;
+	private boolean statutEspaceClient;
+	private boolean espaceClient;
 	@ManyToMany
 	private List<EntiteJuridique> entitesJuridiques;
 
-	public Interlocuteur(String idInterlocuteur, String civilite, String nom, String prenom, String telephone,
+	public Interlocuteur(String idInterlocuteur, String civilite, String nom, String prenom, String telephoneFixe,
 			String telephoneMobile, String fonction, String espaceMembre, String role,
-			String prefCanalContact, String commentaire, String accesInternetActif, String statutEspaceClient,String email,
+			String prefCanalContact, String commentaire, String email, boolean accesInternetActif, boolean statutEspaceClient, boolean espaceClient,
 			List<EntiteJuridique> entitesJuridiques) {
-		super();
 		this.idInterlocuteur = idInterlocuteur;
 		this.civilite = civilite;
 		this.nom = nom;
 		this.prenom = prenom;
-		this.telephone = telephone;
+		this.telephoneFixe = telephoneFixe;
 		this.telephoneMobile = telephoneMobile;
 		this.email = email;
 		this.fonction = fonction;
@@ -49,18 +47,18 @@ public class Interlocuteur {
 		this.commentaire = commentaire;
 		this.accesInternetActif = accesInternetActif;
 		this.statutEspaceClient = statutEspaceClient;
+		this.setEspaceClient(espaceClient);
 		this.entitesJuridiques = entitesJuridiques;
 	}
 	
-	public Interlocuteur(String idInterlocuteur, String civilite, String nom, String prenom, String telephone,
+	public Interlocuteur(String idInterlocuteur, String civilite, String nom, String prenom, String telephoneFixe,
 			String telephoneMobile, String fonction, String espaceMembre, String role,
-			String prefCanalContact, String commentaire, String accesInternetActif, String statutEspaceClient,String email) {
-		super();
+			String prefCanalContact, String commentaire, String email, boolean accesInternetActif, boolean statutEspaceClient, boolean espaceClient) {
 		this.idInterlocuteur = idInterlocuteur;
 		this.civilite = civilite;
 		this.nom = nom;
 		this.prenom = prenom;
-		this.telephone = telephone;
+		this.telephoneFixe = telephoneFixe;
 		this.telephoneMobile = telephoneMobile;
 		this.email = email;
 		this.fonction = fonction;
@@ -70,6 +68,8 @@ public class Interlocuteur {
 		this.commentaire = commentaire;
 		this.accesInternetActif = accesInternetActif;
 		this.statutEspaceClient = statutEspaceClient;
+		this.setEspaceClient(espaceClient);
+		this.entitesJuridiques = new ArrayList<>();
 	}
 
 	
@@ -133,13 +133,13 @@ public class Interlocuteur {
 		this.espaceMembre = espaceMembre;
 	}
 	
-	public String getTelephone() {
-		return telephone;
+	public String getTelephoneFixe() {
+		return telephoneFixe;
 	}
 
 
 	public void setTelephone(String telephone) {
-		this.telephone = telephone;
+		this.telephoneFixe = telephone;
 	}
 
 
@@ -183,22 +183,22 @@ public class Interlocuteur {
 	}
 
 
-	public String getAccesInternetActif() {
+	public boolean getAccesInternetActif() {
 		return accesInternetActif;
 	}
 
 
-	public void setAccesInternetActif(String accesInternetActif) {
+	public void setAccesInternetActif(boolean accesInternetActif) {
 		this.accesInternetActif = accesInternetActif;
 	}
 
 
-	public String getStatutEspaceClient() {
+	public boolean getStatutEspaceClient() {
 		return statutEspaceClient;
 	}
 
 
-	public void setStatutEspaceClient(String statutEspaceClient) {
+	public void setStatutEspaceClient(boolean statutEspaceClient) {
 		this.statutEspaceClient = statutEspaceClient;
 	}
 
@@ -211,5 +211,18 @@ public class Interlocuteur {
 		this.entitesJuridiques = entitesJuridiques;
 	}
 
+
+	public boolean isEspaceClient() {
+		return espaceClient;
+	}
+
+
+	public void setEspaceClient(boolean espaceClient) {
+		this.espaceClient = espaceClient;
+	}
+
+	public void addEntiteJ(EntiteJuridique ej){
+		this.entitesJuridiques.add(ej);
+	}
 	
 }
