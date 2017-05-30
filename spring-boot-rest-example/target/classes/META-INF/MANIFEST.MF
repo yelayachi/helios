@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Implementation-Title: poc-swagger-edma
-Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: yaelayac
-Implementation-Vendor-Id: com.rpicloud
-Build-Jdk: 1.8.0_111
-Created-By: Maven Integration for Eclipse
-Implementation-Vendor: Pivotal Software, Inc.
-

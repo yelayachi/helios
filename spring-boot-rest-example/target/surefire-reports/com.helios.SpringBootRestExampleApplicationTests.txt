@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.helios.SpringBootRestExampleApplicationTests
 -------------------------------------------------------------------------------
-<<<<<<< HEAD:spring-boot-rest-example/target/surefire-reports/com.helios.SpringBootRestExampleApplicationTests.txt
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.275 sec - in com.helios.SpringBootRestExampleApplicationTests
-=======
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.669 sec - in com.helios.SpringBootRestExampleApplicationTests
->>>>>>> 3fc7db09d2e39140a0fc94ca047e1b2d0dfa20c0:spring-boot-rest-example/target/surefire-reports/com.helios.SpringBootRestExampleApplicationTests.txt
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 32.867 sec - in com.helios.SpringBootRestExampleApplicationTests

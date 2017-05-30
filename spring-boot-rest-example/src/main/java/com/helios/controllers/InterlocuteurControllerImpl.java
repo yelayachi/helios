@@ -17,7 +17,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.helios.models.Interlocuteur;
 import com.helios.models.InterlocuteurUtilitaires;
+import com.helios.models.WS01Vue;
 import com.helios.repositories.InterlocuteurRepository;
+import com.helios.util.MapperObjetVue;
 
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -34,8 +36,8 @@ public class InterlocuteurControllerImpl{
   
   @ApiOperation(value="Récupération des données concernant la vue 360° interlocuteur", notes="Service NAMEK")
   @RequestMapping(method = RequestMethod.GET, value = "/vue360/interlocuteur/{id}")
-	public ResponseEntity<Interlocuteur> getInterlocuteur(@ApiParam(value = "id interlocuteur") @PathParam("id interlocuteur") String id) {
-  	return new ResponseEntity<>(repository.findOne(id), HttpStatus.OK);
+	public ResponseEntity<WS01Vue> getInterlocuteur(@ApiParam(value = "id interlocuteur") @PathParam("id interlocuteur") String id) {
+  	return new ResponseEntity<>(MapperObjetVue.traduireToWS01Vue(repository.findOne(id)), HttpStatus.OK);
   }
 
  //Ajout des fonctionalités entité juridiques
