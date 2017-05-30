@@ -51,7 +51,7 @@ public class Etablissement {
 	}
 	
 	public Etablissement(){
-	
+	 
 	}
 
 	public String getRaisonSociale() {

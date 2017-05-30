@@ -88,7 +88,7 @@ public class InterlocuteurUtilitaires {
 					break;
 				}
 			}
-		}
+		} 
 		return resultList;
 		
 		

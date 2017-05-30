@@ -7,5 +7,5 @@ import com.helios.models.Etablissement;
 
 public interface EtablissementRepository extends CrudRepository<Etablissement, String> {
 
-
+ 
 }

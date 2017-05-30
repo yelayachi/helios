@@ -30,7 +30,7 @@ public class MapperObjetVue {
 		ws01.setIdInterlocuteur(interlocuteur.getIdInterlocuteur());
 		ws01.setNom(interlocuteur.getNom());
 		ws01.setPrenom(interlocuteur.getPrenom());
-		ws01.setTelephone(interlocuteur.getTelephone());
+		ws01.setTelephone(interlocuteur.getTelephoneFixe());
 		ws01.setTelephoneMobile(interlocuteur.getTelephoneMobile());
 		List<EntiteJuridiqueVue> entitesJuridiques = new ArrayList<>();
 		if (interlocuteur.getEntitesJuridiques() != null)
@@ -79,7 +79,7 @@ public class MapperObjetVue {
 				interlocuteurWS02Vue.setNom(interlocuteur.getNom());
 				interlocuteurWS02Vue.setPrenom(interlocuteur.getPrenom());
 				interlocuteurWS02Vue.setStatutEspaceClient(interlocuteur.getStatutEspaceClient());
-				interlocuteurWS02Vue.setTelephone(interlocuteur.getTelephone());
+				interlocuteurWS02Vue.setTelephone(interlocuteur.getTelephoneFixe());
 				interlocuteurWS02Vue.setTelephoneMobile(interlocuteur.getTelephoneMobile());
 				interlocuteurs.add(interlocuteurWS02Vue);
 			}

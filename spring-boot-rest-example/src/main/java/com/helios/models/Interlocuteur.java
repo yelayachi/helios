@@ -9,7 +9,7 @@ import javax.persistence.ManyToMany;
  
 @Entity
 public class Interlocuteur {
- 
+
 	@Id
 	private String idInterlocuteur;
 	private String civilite;

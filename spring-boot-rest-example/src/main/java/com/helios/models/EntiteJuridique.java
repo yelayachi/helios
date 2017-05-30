@@ -46,7 +46,7 @@ public class EntiteJuridique {
 	private String numeroRcs;
 	private String villeRcs;
 	private String dateInscriptionRcs;
-	@OneToOne
+	@OneToOne 
 	private Etablissement etablissement;
 	@OneToOne
 	private SourceSiret siretExistant;

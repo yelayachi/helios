@@ -42,7 +42,7 @@ public class InterlocuteurControllerImpl{
   @RequestMapping(method = RequestMethod.GET, value = "/recherche/interlocuteur/ej/{id}")
   public ResponseEntity<List<Interlocuteur>> findAllInterlocuteur(@PathVariable(value="id") String id,
   																		@RequestParam(required = false) String Val_A_Rechercher,
-  																@RequestParam(required= false, defaultValue="20") String nbEnreg) {
+  																	@RequestParam(required= false, defaultValue="20") String nbEnreg) {
   	
   	//On faire un requete pour recuperer tous les interlocuteurs associes a une entite juridique "id_EntiteJ"
   	ResponseEntity<List<Interlocuteur>> listInterlocuteur = new ResponseEntity<>(InterlocuteurUtilitaires.getAllByID(repository.findAll(),id), HttpStatus.OK);
