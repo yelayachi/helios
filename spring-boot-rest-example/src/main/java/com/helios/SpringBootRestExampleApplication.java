@@ -2,6 +2,7 @@ package com.helios;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -47,7 +48,17 @@ public class SpringBootRestExampleApplication {
             entiteRepository.deleteAll();
             etablissementRepo.deleteAll();
             siretRepo.deleteAll();
-           EntiteJuridique ej1 = new EntiteJuridique("1-3G4J4OD", "1234", "Peugeot SA", "A-00-X", "Industrie automibile", "552100554", "55210055400021", "P1", "0", "Privé", "EDF Entreprises",true, faker.internet().emailAddress(), "Poissy", "A-00-X", "Peugeot", "Contractuel", "Excellence", "CLOE", "client", "5699 - SA à directoire (s.a.i.)", "7010Z - Activités des sièges sociaux", "19/06/1988", "7010Z", "Activités des sièges sociaux", "PEUGEOT SA", "CASE 17", "75 AV LA PETITE MURAILLE", "78116 PARIS (78116)", "", "", "", "", "", etablissementRepo.save(new Etablissement("8483","Peugeot SA", "Peugeot", "552100554", "5699 - SA à directoire (s.a.i.)", "7010Z - Activités des sièges sociaux", "19/06/1990", "7010Z", "Activités des sièges sociaux", "PEUGEOT SA", "CASE 17", "75 AV LA PETITE MURAILLE", "78116 PARIS (78116)", "", "", "", "", "")), siretRepo.save(new SourceSiret("5683",true, false, false, false)));
+            
+            Interlocuteur i1 = repository.save(new Interlocuteur("1-105W7IX","MME","PACAUX","CLAIRE","+330619054702","+330619054702","PDG / Gérant","EDF Entreprises","","","",faker.internet().emailAddress(),true,false,true));
+            Interlocuteur i2 = repository.save(new Interlocuteur("1-11FKG94","MME","PRELAZ","PRESCILLIA","+330689886372","+330689886372","Autre","","","","",faker.internet().emailAddress(),true,true,true));
+            Interlocuteur i3 = repository.save(new Interlocuteur("1-138-345","M.","LALANNE","CHRISTIAN","+330381515430","+330381505797","Responsable","EDF Entreprises","","","",faker.internet().emailAddress(),false,true,false));
+            
+            List<Interlocuteur> listInterlocuteurs = new ArrayList<>();
+	        listInterlocuteurs.add(i1);
+	        listInterlocuteurs.add(i2);
+	        listInterlocuteurs.add(i3);
+            
+            EntiteJuridique ej1 = entiteRepository.save(new EntiteJuridique("1-3G4J4OD", "1234", "Peugeot SA", "A-00-X", "Industrie automibile", "552100554", "55210055400021", "P1", "0", "Privé", "EDF Entreprises",true, faker.internet().emailAddress(), "Poissy", "A-00-X", "Peugeot", "Contractuel", "Excellence", "CLOE", "client", "5699 - SA à directoire (s.a.i.)", "7010Z - Activités des sièges sociaux", "19/06/1988", "7010Z", "Activités des sièges sociaux", "PEUGEOT SA", "CASE 17", "75 AV LA PETITE MURAILLE", "78116 PARIS (78116)", "", "", "", "", "", etablissementRepo.save(new Etablissement("8483","Peugeot SA", "Peugeot", "552100554", "5699 - SA à directoire (s.a.i.)", "7010Z - Activités des sièges sociaux", "19/06/1990", "7010Z", "Activités des sièges sociaux", "PEUGEOT SA", "CASE 17", "75 AV LA PETITE MURAILLE", "78116 PARIS (78116)", "", "", "", "", "")), siretRepo.save(new SourceSiret("5683",true, false, false, false)),listInterlocuteurs));
             
            	  repository.save(new Interlocuteur("1-105W7IX","MME","PACAUX","CLAIRE","+330619054702","+330619054702","PDG / Gérant","EDF Entreprises","","","",faker.internet().emailAddress(),true,false,true,new ArrayList<EntiteJuridique>(
          		    Arrays.asList(entiteRepository.save(ej1)))));
@@ -56,12 +67,9 @@ public class SpringBootRestExampleApplication {
               repository.save( new Interlocuteur("1-138-345","M.","LALANNE","CHRISTIAN","+330381515430","+330381505797","Responsable","EDF Entreprises","","","",faker.internet().emailAddress(),false,true,false,new ArrayList<EntiteJuridique>(
             		    Arrays.asList(entiteRepository.save(ej1)))));
               
-
-//           Interlocuteur i2 = new Interlocuteur("1-11FKG94","MME","PRELAZ","PRESCILLIA","+330689886372","+330689886372","Autre","","","","",faker.internet().emailAddress(),true,true,true);
-//           Interlocuteur i3 = new Interlocuteur("1-138-345","M.","LALANNE","CHRISTIAN","+330381515430","+330381505797","Responsable","EDF Entreprises","","","",faker.internet().emailAddress(),false,true,false);
-//           entiteRepository.save(ej1);
+        
 //           EntiteJuridique ej2 = new EntiteJuridique("1-3G4J4OD", "1234", "Peugeot SA", "A-00-X", "Industrie automibile", "552100554", "55210055400021", "P1", "0", "Privé", "EDF Entreprises",true, faker.internet().emailAddress(), "Poissy", "A-00-X", "Peugeot", "Contractuel", "Excellence", "CLOE", "client", "5699 - SA à directoire (s.a.i.)", "7010Z - Activités des sièges sociaux", "19/06/1988", "7010Z", "Activités des sièges sociaux", "PEUGEOT SA", "CASE 17", "75 AV LA PETITE MURAILLE", "78116 PARIS (78116)", "", "", "", "", "", new Etablissement("8483","Peugeot SA", "Peugeot", "552100554", "5699 - SA à directoire (s.a.i.)", "7010Z - Activités des sièges sociaux", "19/06/1990", "7010Z", "Activités des sièges sociaux", "PEUGEOT SA", "CASE 17", "75 AV LA PETITE MURAILLE", "78116 PARIS (78116)", "", "", "", "", ""), new SourceSiret("5683",true, false, false, false));
-//           
+           
 //           
 //           Interlocuteur i4 = i1;
 //           Interlocuteur i5 = i2;
