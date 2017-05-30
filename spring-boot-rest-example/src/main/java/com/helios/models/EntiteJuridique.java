@@ -1,9 +1,11 @@
 package com.helios.models;
 
+
+import java.util.List;
+
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class EntiteJuridique {
@@ -15,9 +17,10 @@ public class EntiteJuridique {
 	private String siren;
 	private String risqueLiquidationJudiciaire;
 	private String segmentCommercial;
+	@OneToMany
+	private List<Interlocuteur> listInter;
 	
-	public EntiteJuridique() {		
-	}
+	
 	
 	public EntiteJuridique(String idEntiteJuridique, String reference, String raisonSociale, String siren,
 			String risqueLiquidationJudiciaire, String segmentCommercial) {
@@ -29,6 +32,24 @@ public class EntiteJuridique {
 		this.risqueLiquidationJudiciaire = risqueLiquidationJudiciaire;
 		this.segmentCommercial = segmentCommercial;
 	}
+	
+	public EntiteJuridique() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public EntiteJuridique(String idEntiteJuridique, String reference, String raisonSociale, String siren,
+			String risqueLiquidationJudiciaire, String segmentCommercial, List<Interlocuteur>  list) {
+
+		this.idEntiteJuridique = idEntiteJuridique;
+		this.reference = reference;
+		this.raisonSociale = raisonSociale;
+		this.siren = siren;
+		this.risqueLiquidationJudiciaire = risqueLiquidationJudiciaire;
+		this.segmentCommercial = segmentCommercial;
+		this.listInter = list;
+	}
+
 
 	public String getIdEntiteJuridique() {
 		return idEntiteJuridique;
@@ -78,5 +99,12 @@ public class EntiteJuridique {
 		this.segmentCommercial = segmentCommercial;
 	}
 
+	public List<Interlocuteur> getListInter() {
+		return listInter;
+	}
+
+	public void setListInter(List<Interlocuteur> listInter) {
+		this.listInter = listInter;
+	}
 	
 	}
