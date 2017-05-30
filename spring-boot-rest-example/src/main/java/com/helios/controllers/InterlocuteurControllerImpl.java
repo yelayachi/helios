@@ -36,14 +36,14 @@ public class InterlocuteurControllerImpl{
   
   @ApiOperation(value="Récupération des données concernant la vue 360° interlocuteur", notes="Service NAMEK")
   @RequestMapping(method = RequestMethod.GET, value = "/vue360/interlocuteur/{id}")
-	public ResponseEntity<WS01Vue> getInterlocuteur(@ApiParam(value = "id interlocuteur") @PathParam("id interlocuteur") String id) {
+	public ResponseEntity<WS01Vue> getInterlocuteur(@PathVariable(value="id") String id) {
   	return new ResponseEntity<>(MapperObjetVue.traduireToWS01Vue(repository.findOne(id)), HttpStatus.OK);
   }
 
  //Ajout des fonctionalités entité juridiques
 
   @ApiOperation(value="Récupération des données concernant l'interlocuteur (client)", notes="Service Namek (USW6 et USW5)")
-  @RequestMapping(method = RequestMethod.GET, value = "/vue360/ej/{id}")
+  @RequestMapping(method = RequestMethod.GET, value = "/vue360/interlocuteur/ej/{id}")
   public ResponseEntity<List<Interlocuteur>> findAllInterlocuteur(@PathVariable(value="id") String id,
   																		@RequestParam(required = false) String Val_A_Rechercher,
   																		@RequestParam(required= false, defaultValue="20") String nbEnreg) {
@@ -63,8 +63,8 @@ public class InterlocuteurControllerImpl{
   	MultiValueMap<String,String> header = new HttpHeaders();
   	header.add("nbResult", result.getBody().size()+"");
   	
-  	return new ResponseEntity<>(result.getBody(),header ,HttpStatus.OK);
   	
+  	return new ResponseEntity<>(result.getBody(),header ,HttpStatus.OK);
   }
   
   

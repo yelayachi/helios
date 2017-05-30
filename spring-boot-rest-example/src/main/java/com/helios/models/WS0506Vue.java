@@ -1,6 +1,6 @@
 package com.helios.models;
 
-public class WS05Vue {
+public class WS0506Vue {
 	
 	
 	private String idInterlocuteur;

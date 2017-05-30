@@ -15,7 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.helios.models.EntiteJuridique;
 import com.helios.models.EntiteJuridiqueUtilitaires;
+import com.helios.models.WS01Vue;
+import com.helios.models.WS02Vue;
+import com.helios.models.WS03Vue;
 import com.helios.repositories.EntiteJuridiqueRepository;
+import com.helios.util.MapperObjetVue;
 
 import io.swagger.annotations.ApiOperation;
 
@@ -31,10 +35,10 @@ public class EntiteJuridiqueControllerImpl{
      * @param id
      * @return La vue 360 de Entité Juridique au format json
      */
-	@RequestMapping(value = "/vue360/ej/{id}/", method = RequestMethod.GET)
 	@ApiOperation(value="Récupération des données concernant la vue 360° Entité Juridique", notes="Service NAMEK")
-	public ResponseEntity<EntiteJuridique> getEJ(@PathVariable(value="id") String id) {
-		return new ResponseEntity<>(repository.findOne(id), HttpStatus.OK);
+	@RequestMapping(method = RequestMethod.GET,value = "/vue360/ej/{id}/")
+	public ResponseEntity<WS02Vue> getEJ(@PathVariable(value="id") String id) {
+		return new ResponseEntity<>(MapperObjetVue.traduireToWS02(repository.findOne(id)), HttpStatus.OK);
 	}
 	
 
@@ -46,20 +50,20 @@ public class EntiteJuridiqueControllerImpl{
      * @return
      */
 	 @ApiOperation(value="Récupération des données concernant entite juridique", notes="Service Namek (USW6 et USW5)")
-	 @RequestMapping(method = RequestMethod.GET, value = "/recherche/ej/interlocuteur/{id_EntiteJ}")
-	 public ResponseEntity<List<EntiteJuridique>> findAllEJVal(@PathVariable(value="id_EntiteJ") String id_EntiteJ, @RequestParam(required = false)String Val_A_Rechercher,
+	 @RequestMapping(method = RequestMethod.GET, value = "/recherche/ej/interlocuteur/{id_interlocuteur}")
+	 public ResponseEntity<List<WS03Vue>> findAllEJVal(@PathVariable(value="id_interlocuteur") String id_EntiteJ, @RequestParam(required = false)String Val_A_Rechercher,
 			@RequestParam(required = false, defaultValue="20") String nbEnreg) {
 		 if(Val_A_Rechercher == null || Val_A_Rechercher.equals("")){
-			 ResponseEntity<List<EntiteJuridique>> listEntiteJuridique = new ResponseEntity<>(EntiteJuridiqueUtilitaires.getAllByID(repository.findAll(),id_EntiteJ), HttpStatus.OK);
-			 return EntiteJuridiqueUtilitaires.getFixeSize(listEntiteJuridique,Integer.valueOf(nbEnreg));
+			 List<EntiteJuridique> listEntiteJuridique = EntiteJuridiqueUtilitaires.getAllByID(repository.findAll(),id_EntiteJ);
+			 return new ResponseEntity<>(MapperObjetVue.traduireToWS0304(EntiteJuridiqueUtilitaires.getFixeSize(listEntiteJuridique,Integer.valueOf(nbEnreg))),HttpStatus.OK);
 		 }
-		ResponseEntity<List<EntiteJuridique>> listEntiteJuridique = new ResponseEntity<>(EntiteJuridiqueUtilitaires.getAllByID(repository.findAll(),id_EntiteJ), HttpStatus.OK);
-		ResponseEntity<List<EntiteJuridique>> result= EntiteJuridiqueUtilitaires.getFixeSize(EntiteJuridiqueUtilitaires.getAllMath(listEntiteJuridique, Val_A_Rechercher),Integer.valueOf(nbEnreg));
+		List<EntiteJuridique> listEntiteJuridique = EntiteJuridiqueUtilitaires.getAllByID(repository.findAll(),id_EntiteJ);
+		List<EntiteJuridique> result= EntiteJuridiqueUtilitaires.getFixeSize(EntiteJuridiqueUtilitaires.getAllMath(listEntiteJuridique, Val_A_Rechercher),Integer.valueOf(nbEnreg));
 
 		MultiValueMap<String,String> header = new HttpHeaders();
-		header.add("nbResult", result.getBody().size()+"");
+		header.add("nbResult", result.size()+"");
 		
-		return new ResponseEntity<>(result.getBody(),header ,HttpStatus.OK);
+		return new ResponseEntity<>(MapperObjetVue.traduireToWS0304(result),header ,HttpStatus.OK);
 	}
 	 /**
 	  * Récupération des entités juridiques a parti du siret

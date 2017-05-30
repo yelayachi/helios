@@ -25,14 +25,14 @@ public class EntiteJuridiqueUtilitaires {
 	 * @param size : int
 	 * @return une liste d'entite juridique
 	 */
-	public static ResponseEntity<List<EntiteJuridique>> getFixeSize(ResponseEntity<List<EntiteJuridique>> entiteJuridique, int size){
+	public static List<EntiteJuridique> getFixeSize(List<EntiteJuridique> entiteJuridique, int size){
 			
 			List<EntiteJuridique> resultTmp = new ArrayList<EntiteJuridique>(size);
 			
-			for ( int i=0;i<entiteJuridique.getBody().size();i++){
-				resultTmp.add(entiteJuridique.getBody().get(i));
+			for ( int i=0;i<entiteJuridique.size();i++){
+				resultTmp.add(entiteJuridique.get(i));
 			}
-			ResponseEntity<List<EntiteJuridique>> resultList = new ResponseEntity<>(resultTmp, HttpStatus.OK);
+			List<EntiteJuridique> resultList = resultTmp;
 			return resultList;
 		}
 	
@@ -43,7 +43,7 @@ public class EntiteJuridiqueUtilitaires {
 			for (EntiteJuridique i : entiteJuridique){
 				
 				for (Interlocuteur e :i.getListInter()){
-					if (e.getEntitesJuridiques().equals(id)){
+					if (e.getIdInterlocuteur().equals(id)){
 						resultList.add(i);
 						break;
 					}
@@ -75,18 +75,18 @@ public class EntiteJuridiqueUtilitaires {
 	 * @param s : String
 	 * @return Une liste d'entité juridique
 	 */
-	public static ResponseEntity<List<EntiteJuridique>> getAllMath(ResponseEntity<List<EntiteJuridique>> entiteJuridique, String s){
+	public static List<EntiteJuridique> getAllMath(List<EntiteJuridique> entiteJuridique, String s){
 		
 		//La liste qui va contenir les entitées Juridique qui matchent s
 		List<EntiteJuridique> result = new ArrayList<EntiteJuridique>();
 		
-		for (EntiteJuridique i : entiteJuridique.getBody()){
+		for (EntiteJuridique i : entiteJuridique){
 			//Il faudra prendre en compte dans l'implementation reelle les donnees flagees supprimees
 			if (isMatch(i, s)){
 				result.add(i);
 			}
 		}
-		ResponseEntity<List<EntiteJuridique>> resultList = new ResponseEntity<>(result, HttpStatus.OK);
+		List<EntiteJuridique> resultList = result;
 		return resultList;
 		
 	}
