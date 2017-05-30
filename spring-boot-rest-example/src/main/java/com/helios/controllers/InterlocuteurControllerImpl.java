@@ -54,8 +54,8 @@ public class InterlocuteurControllerImpl{
   		//cas USW6
   		return InterlocuteurUtilitaires.getFixeSize(listInterlocuteur,Integer.valueOf(nbEnreg));
   	}
-  	//cas USW5
   	
+  	//cas USW5  	
   	ResponseEntity<List<Interlocuteur>> result= InterlocuteurUtilitaires.getFixeSize(InterlocuteurUtilitaires.getAllMath(listInterlocuteur, Val_A_Rechercher),Integer.parseInt(nbEnreg));
   	
   	MultiValueMap<String,String> header = new HttpHeaders();
@@ -64,5 +64,6 @@ public class InterlocuteurControllerImpl{
   	return new ResponseEntity<>(result.getBody(),header ,HttpStatus.OK);
   	
   }
+  
   
 }

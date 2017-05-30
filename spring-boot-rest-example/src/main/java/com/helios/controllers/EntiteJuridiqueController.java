@@ -51,7 +51,7 @@ public interface EntiteJuridiqueController {
      */
     @ApiOperation(value="Recuperation des données concernant l'entités juridiques associées à un interlocuteur dans une pop up", notes="Service Namek (USW6 et USW5)")
     @RequestMapping(method = RequestMethod.GET,params = {"id_inter"}, value = "/v0/recherche/ej/interlocuteur/")
-    public ResponseEntity<List<EntiteJuridique>> findAllEJID(@ApiParam(value = "id Interlocuteur") @PathParam("id Interlocuteur") String id_inter,
+    public ResponseEntity<List<EntiteJuridique>> findAllEJID(@ApiParam(value = "id <") @PathParam("id Interlocuteur") String id_inter,
     		@ApiParam(value = "nbEnreg", name="nombre d'enregistrements à retourner",defaultValue = "20",required = false) @PathVariable(value="nombre d'enregistrements à retourner") String nbEnreg);
     
 }

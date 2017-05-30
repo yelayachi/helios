@@ -29,7 +29,7 @@ public class EntiteJuridiqueUtilitaires {
 			
 			List<EntiteJuridique> resultTmp = new ArrayList<EntiteJuridique>(size);
 			
-			for ( int i=0;i<=entiteJuridique.getBody().size();i++){
+			for ( int i=0;i<entiteJuridique.getBody().size();i++){
 				resultTmp.add(entiteJuridique.getBody().get(i));
 			}
 			ResponseEntity<List<EntiteJuridique>> resultList = new ResponseEntity<>(resultTmp, HttpStatus.OK);

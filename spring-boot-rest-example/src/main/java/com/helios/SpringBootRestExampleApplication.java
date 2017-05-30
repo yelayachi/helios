@@ -82,21 +82,6 @@ public class SpringBootRestExampleApplication {
         };
     }
     
-    /**
-     * 
-     * @return
-     */
-
-//    @Bean
-//    public Docket swaggerSettings() {
-//        return new Docket(DocumentationType.SWAGGER_2)
-//                .select()
-//                .apis(RequestHandlerSelectors.any())
-//                .paths(PathSelectors.any())
-//                .build()
-//                .pathMapping("/");
-//    }
-
 	@Bean
     public Docket newsApi() {
 		return new Docket(DocumentationType.SWAGGER_2)  

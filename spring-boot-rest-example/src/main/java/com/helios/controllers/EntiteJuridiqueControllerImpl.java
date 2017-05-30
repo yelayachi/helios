@@ -60,5 +60,18 @@ public class EntiteJuridiqueControllerImpl{
 		header.add("nbResult", result.getBody().size()+"");
 		
 		return new ResponseEntity<>(result.getBody(),header ,HttpStatus.OK);
-	}	
+	}
+	 /**
+	  * Récupération des entités juridiques a parti du siret
+	  * @param siret
+	  * @param nbEnreg
+	  * @return
+	  */
+	 @ApiOperation(value="Récupération des entités juridiques a parti du siret", notes="Service Altair (USW07)")
+	 @RequestMapping(method = RequestMethod.GET, value = "/recherche/ej/")
+	 public ResponseEntity<List<EntiteJuridique>> findAllEJBySiret(@RequestParam(required = true)String siret,
+			@RequestParam(required = false, defaultValue="20") String nbEnreg) {
+		 return new ResponseEntity<>(repository.findAllBySiret(siret), HttpStatus.OK);
+		
+	 }
 }
