@@ -48,7 +48,7 @@ public class EntiteJuridiqueControllerImpl{
      * @param Val_A_Rechercher
      * @param nbEnreg
      * @return
-     */
+     */ 
 	 @ApiOperation(value="Récupération des données concernant entite juridique", notes="Service Namek (USW6 et USW5)")
 	 @RequestMapping(method = RequestMethod.GET, value = "/recherche/ej/interlocuteur/{id_interlocuteur}")
 	 public ResponseEntity<List<WS03Vue>> findAllEJVal(@PathVariable(value="id_interlocuteur") String id_EntiteJ, @RequestParam(required = false)String Val_A_Rechercher,
