@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
-Implementation-Title: spring-boot-rest-example
+Implementation-Title: poc-swagger-edma
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: yaelayac
+Built-By: gngoumgn
 Implementation-Vendor-Id: com.rpicloud
-Build-Jdk: 1.8.0_111
+Build-Jdk: 1.8.0_121
 Created-By: Maven Integration for Eclipse
 Implementation-Vendor: Pivotal Software, Inc.
 

@@ -30,12 +30,15 @@ public class InterlocuteurControllerImpl{
   @Autowired
   private InterlocuteurRepository repository;
 
+
   
   @ApiOperation(value="Récupération des données concernant la vue 360° interlocuteur", notes="Service NAMEK")
   @RequestMapping(method = RequestMethod.GET, value = "/vue360/interlocuteur/{id}")
 	public ResponseEntity<Interlocuteur> getInterlocuteur(@ApiParam(value = "id interlocuteur") @PathParam("id interlocuteur") String id) {
   	return new ResponseEntity<>(repository.findOne(id), HttpStatus.OK);
   }
+
+ //Ajout des fonctionalités entité juridiques
 
   @ApiOperation(value="Récupération des données concernant l'interlocuteur (client)", notes="Service Namek (USW6 et USW5)")
   @RequestMapping(method = RequestMethod.GET, value = "/vue360/ej/{id}")
