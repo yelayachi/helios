@@ -2,7 +2,11 @@
 Test set: com.helios.SpringBootRestExampleApplicationTests
 -------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.336 sec - in com.helios.SpringBootRestExampleApplicationTests
 =======
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 32.867 sec - in com.helios.SpringBootRestExampleApplicationTests
 >>>>>>> 5d8b08087c9c1f338e0e5358b73ed58c70179a75
+=======
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.673 sec - in com.helios.SpringBootRestExampleApplicationTests
+>>>>>>> d972bb4d40aa4689bce415b5e88e878db71386dd

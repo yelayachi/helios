@@ -40,11 +40,14 @@ C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\m
 C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\Contact.java
 C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\Interlocuteur.java
 C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\Adresse.java
-C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\WS05Vue.java
 C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\SirenExistantVue.java
 C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\repositories\InterlocuteurRepository.java
 C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\WS03Vue.java
 C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\repositories\EntiteJuridiqueRepository.java
 C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\SpringBootRestExampleApplication.java
 C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\WS02Vue.java
+<<<<<<< HEAD
 >>>>>>> 5d8b08087c9c1f338e0e5358b73ed58c70179a75
+=======
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\WS0506Vue.java
+>>>>>>> d972bb4d40aa4689bce415b5e88e878db71386dd

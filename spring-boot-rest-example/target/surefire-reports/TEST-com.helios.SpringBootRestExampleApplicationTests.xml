@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.helios.SpringBootRestExampleApplicationTests" time="0" tests="1" errors="0" skipped="0" failures="0">
+<testsuite name="com.helios.SpringBootRestExampleApplicationTests" time="0.015" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
 <<<<<<< HEAD
@@ -43,11 +43,15 @@
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 7"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <property name="classworlds.conf" value="C:\Users\bdansoko\Documents\workspace-sts-3.8.4.RELEASE\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf515400651798030371.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files (x86)/Java/jre1.8.0_91/bin/client;C:/Program Files (x86)/Java/jre1.8.0_91/bin;C:/Program Files (x86)/Java/jre1.8.0_91/lib/i386;C:\ProgramData\Oracle\Java\javapath;C:\Perl\site\bin;C:\Perl\bin;C:\Program Files\Java\jdk1.7.0_79;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Bitvise SSH Client;C:\Program Files\apache-maven-3.3.9\bin;C:\Users\bdansoko\.babun;D:\Users\bdansoko\Documents\EDMA\sts-bundle\sts-3.8.4.RELEASE;;."/>
 =======
     <property name="classworlds.conf" value="C:\Users\yaelayac\Documents\workspace-sts-3.8.4.RELEASE\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf1267209415330594157.tmp"/>
+=======
+    <property name="classworlds.conf" value="C:\Users\yaelayac\Documents\workspace-sts-3.8.4.RELEASE\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf1463475752650776707.tmp"/>
+>>>>>>> d972bb4d40aa4689bce415b5e88e878db71386dd
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_101\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files (x86)/Java/jre1.8.0_111/bin/client;C:/Program Files (x86)/Java/jre1.8.0_111/bin;C:/Program Files (x86)/Java/jre1.8.0_111/lib/i386;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_101\bin;D:\Users\yaelayac\Desktop\Xebia\sts\sts-bundle\sts-3.8.4.RELEASE;;."/>
 >>>>>>> 5d8b08087c9c1f338e0e5358b73ed58c70179a75
@@ -102,5 +106,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="contextLoads" classname="com.helios.SpringBootRestExampleApplicationTests" time="0"/>
+  <testcase name="contextLoads" classname="com.helios.SpringBootRestExampleApplicationTests" time="0.015"/>
 </testsuite>

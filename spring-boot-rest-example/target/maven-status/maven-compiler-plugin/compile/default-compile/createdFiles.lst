@@ -20,9 +20,9 @@ com\helios\models\WS03Vue.class
 com\helios\util\MapperObjetVue.class
 com\helios\models\Contact.class
 com\helios\repositories\EntiteJuridiqueRepository.class
+com\helios\models\WS0506Vue.class
 com\helios\models\Identite.class
 com\helios\repositories\InterlocuteurRepository.class
-com\helios\models\WS05Vue.class
 com\helios\models\WS02Vue.class
 com\helios\models\EntiteJuridique.class
 com\helios\models\SiretExistantVue.class
