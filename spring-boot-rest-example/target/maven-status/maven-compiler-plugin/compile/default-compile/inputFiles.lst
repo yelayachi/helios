@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\bdansoko\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\Contact.java
 C:\Users\bdansoko\git\helios\spring-boot-rest-example\src\main\java\com\helios\SpringBootRestExampleApplication.java
 C:\Users\bdansoko\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\Adresse.java
@@ -17,3 +18,33 @@ C:\Users\bdansoko\git\helios\spring-boot-rest-example\src\main\java\com\helios\m
 C:\Users\bdansoko\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\EntiteJuridique.java
 C:\Users\bdansoko\git\helios\spring-boot-rest-example\src\main\java\com\helios\controllers\EntiteJuridiqueController.java
 C:\Users\bdansoko\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\EntiteJuridiqueUtilitaires.java
+=======
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\util\MapperObjetVue.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\WS01Vue.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\controllers\InterlocuteurController.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\EntiteJuridique.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\Identite.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\controllers\InterlocuteurControllerImpl.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\WS07Vue.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\InterlocuteurUtilitaires.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\EntiteJuridiqueUtilitaires.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\controllers\EntiteJuridiqueController.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\EtablissementVue.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\WS08Vue.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\EntiteJuridiqueVue.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\SiegeSocialVue.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\controllers\testController.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\controllers\EntiteJuridiqueControllerImpl.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\InterlocuteurWS02Vue.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\SiretExistantVue.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\Contact.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\Interlocuteur.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\Adresse.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\WS05Vue.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\SirenExistantVue.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\repositories\InterlocuteurRepository.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\WS03Vue.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\repositories\EntiteJuridiqueRepository.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\SpringBootRestExampleApplication.java
+C:\Users\yaelayac\git\helios\spring-boot-rest-example\src\main\java\com\helios\models\WS02Vue.java
+>>>>>>> 5d8b08087c9c1f338e0e5358b73ed58c70179a75

@@ -1,4 +1,5 @@
 com\helios\controllers\EntiteJuridiqueController.class
+<<<<<<< HEAD
 com\helios\repositories\SourceSiretRepository.class
 com\helios\controllers\InterlocuteurControllerImpl.class
 com\helios\models\Contact.class
@@ -14,6 +15,32 @@ com\helios\SpringBootRestExampleApplication.class
 com\helios\controllers\testController.class
 com\helios\models\EntiteJuridique.class
 com\helios\repositories\EtablissementRepository.class
+=======
+com\helios\models\WS03Vue.class
+com\helios\util\MapperObjetVue.class
+com\helios\models\Contact.class
+com\helios\repositories\EntiteJuridiqueRepository.class
+com\helios\models\Identite.class
+com\helios\repositories\InterlocuteurRepository.class
+com\helios\models\WS05Vue.class
+com\helios\models\WS02Vue.class
+com\helios\models\EntiteJuridique.class
+com\helios\models\SiretExistantVue.class
+com\helios\models\SiegeSocialVue.class
+com\helios\models\WS07Vue.class
+com\helios\models\EtablissementVue.class
+com\helios\models\SirenExistantVue.class
+com\helios\controllers\InterlocuteurControllerImpl.class
+com\helios\models\WS01Vue.class
+com\helios\models\InterlocuteurWS02Vue.class
+com\helios\models\Interlocuteur.class
+com\helios\models\EntiteJuridiqueUtilitaires.class
+com\helios\models\WS08Vue.class
+com\helios\controllers\EntiteJuridiqueControllerImpl.class
+com\helios\SpringBootRestExampleApplication.class
+com\helios\controllers\testController.class
+com\helios\models\EntiteJuridiqueVue.class
+>>>>>>> 5d8b08087c9c1f338e0e5358b73ed58c70179a75
 com\helios\models\InterlocuteurUtilitaires.class
 com\helios\controllers\InterlocuteurController.class
 com\helios\models\Adresse.class
